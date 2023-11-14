@@ -1,0 +1,107 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+  list-style-type: none;
+
+  text-align: center;
+}
+
+header, body {
+  background-color:#dee1e3;
+}
+
+div {
+  text-decoration: none;
+  font-family: 'Andale Mono, monospace';
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style-type:none;
+}
+
+div.dataInput {
+  padding: 5px;
+}
+div.dataInput > form{
+  border-radius: 10px;
+  background-color:#0d173b;
+  padding: 5px;
+}
+div.dataInput > form > label {
+  display: block;
+  padding: 5px;
+}
+
+
+div.showData{
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+div.showData > div{
+  padding: 3px;
+}
+div.showData > div > li{
+  border-radius: 10px;
+  width: 100px;
+  padding: 5px;
+  background-color: #0d183b;
+}
+
+div.windows {
+  padding: 10px;
+  min-width: 250px;
+}
+div.windowsContent {
+  color: #dee1e3;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #1e3665d0;
+  
+}
+
+
+ul.nav {
+  color: Black;
+}
+
+ul.nav-tabs {
+  display:flex;
+  justify-content: center;
+  background-color: #1e3665d0;
+  padding-block: 10px;
+  color: #dee1e3;
+}
+
+p.nav-link {
+  padding-inline: 15px;
+  font-size: large;
+}
+
+table {
+  width:100%;
+
+}
+
+tr {
+  width:100%;
+}
+
+td {
+  padding: 3px;
+}
