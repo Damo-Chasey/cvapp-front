@@ -8,7 +8,7 @@ export function ShowData() {
     }, [])
 
     const names = async () => {
-        const response = await fetch('http://localhost:3001/users');
+        const response = await fetch('https://desolate-eyrie-13469-959621a3e284.herokuapp.com/users');
         console.log("Fetched entries");
 
         setName(await response.json());
