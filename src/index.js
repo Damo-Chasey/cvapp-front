@@ -14,8 +14,10 @@ class App extends React.Component{
       <header className='App-header'>
         <div>
         
-        <Dropdown element={this.linkUp()}/>
+        {this.linkUp()}
+        <Dropdown/>
         
+
         </div>
 
         <p>Github for this project:</p><a href="https://github.com/Damo-Chasey/cvapp"><img 
