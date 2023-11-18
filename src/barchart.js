@@ -28,12 +28,12 @@ function BarChart(){
         datasets: [{
             label: '# of occurances',
             data: [
-                countEntries("Red", data), 
-                countEntries("Blue", data), 
-                countEntries("Green", data), 
-                countEntries("Yellow", data), 
-                countEntries("Orange", data), 
-                countEntries("Purple", data)],
+                countEntries("red", data), 
+                countEntries("blue", data), 
+                countEntries("green", data), 
+                countEntries("yellow", data), 
+                countEntries("orange", data), 
+                countEntries("purple", data)],
             backgroundColor: ['#EE685D', '#5D87EE', '#5DEE5E', '#EAEE5D', '#EE9D5D', '#BD5DEE'],
         }]});
         console.log("Chart data updated");
@@ -42,7 +42,8 @@ function BarChart(){
     const countEntries = (group, data) => {
         var count = 0;
         for(var i = 0; i < data.length; i++){
-            if(data[i].colour == group){
+            
+            if(data[i].colour.toLowerCase() == group){
                 count++;
             }
         }
