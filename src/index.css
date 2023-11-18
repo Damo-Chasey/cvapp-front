@@ -35,9 +35,7 @@ ol, ul {
   list-style-type:none;
 }
 
-div.dataInput {
-  padding: 5px;
-}
+
 div.dataInput > form{
   border-radius: 10px;
   background-color:#0d173b;
@@ -47,18 +45,18 @@ div.dataInput > form > label {
   display: block;
   padding: 5px;
 }
-
-
 div.showData{
   display: inline-flex;
   flex-wrap: wrap;
+  background-color: #1e3665d0;
+  border-radius: 10px;
 }
 div.showData > div{
   padding: 3px;
 }
 div.showData > div > li{
   border-radius: 10px;
-  width: 100px;
+  width: 150px;
   padding: 5px;
   background-color: #0d183b;
 }
@@ -71,10 +69,13 @@ div.windowsContent {
   color: #dee1e3;
   border-radius: 10px;
   padding: 5px;
-  background-color: #1e3665d0;
   
 }
-
+div.titleBox{
+  color: #dee1e3;
+  background-color: #1e3665d0;
+  border-radius: 10px;
+}
 
 ul.nav {
   color: Black;
@@ -98,10 +99,14 @@ table {
 
 }
 
-tr {
-  width:100%;
+div.spacer{
+  background-color:"#dee1e3";
+  padding-Block:"100px" ;
+  color:"White";
 }
 
-td {
-  padding: 3px;
+td.chartTable {
+  background-color:#dee1e3;
+  border-radius: 10px;
+  padding: 15px;
 }

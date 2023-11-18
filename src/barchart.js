@@ -24,7 +24,7 @@ function BarChart(){
     }
 
     const updateChartData = (data) => {
-        setCharData({labels: ['Red', 'Blue', 'Green', 'Yellow', 'Orange', 'Purple'],
+        setCharData({labels: ['Red', 'Blue', 'Green', 'Yellow', 'Orange', 'Purple', 'Pink', 'Black', 'White'],
         datasets: [{
             label: '# of occurances',
             data: [
@@ -33,8 +33,11 @@ function BarChart(){
                 countEntries("green", data), 
                 countEntries("yellow", data), 
                 countEntries("orange", data), 
-                countEntries("purple", data)],
-            backgroundColor: ['#EE685D', '#5D87EE', '#5DEE5E', '#EAEE5D', '#EE9D5D', '#BD5DEE'],
+                countEntries("purple", data),
+                countEntries("pink", data),
+                countEntries("black", data),
+                countEntries("white", data)],
+            backgroundColor: ['#EE685D', '#5D87EE', '#5DEE5E', '#EAEE5D', '#EE9D5D', '#BD5DEE', '#F052E8', '#121212', '#F3F3F3'],
         }]});
         console.log("Chart data updated");
     }
@@ -61,30 +64,3 @@ function BarChart(){
 }
 
 export default BarChart;
-
-
-//const countEntries = (group) => {
-//    var count = 0;
-//    for(var i = 0; i < colorData.length; i++){
-//        if(colorData[i].colour == group){
-//            count++;
-//        }
-//    }
-//    return count;
-//}
-
-//const updateChartData = () => {
-//    setCharData({labels: ['Red', 'Blue', 'Green', 'Yellow', 'Orange', 'Purple'],
-//    datasets: [{
-//        label: '# of occurances',
-//        data: [
-//            countEntries("Red"), 
-//            countEntries("Blue"), 
-//            countEntries("Green"), 
-//            countEntries("Yellow"), 
-//            countEntries("Orange"), 
-//            countEntries("Purple")],
-//        borderWidth: 1
-//    }]});
-//    console.log("Chart data updated");
-//}
