@@ -1,6 +1,20 @@
 import React from 'react';
 
+
 class Homepage extends React.Component{
+    //constructor (props){
+    //    super(props)
+    //    this.state = {
+    //        checked: false,
+    //    };
+//
+    //    this.handleChange = this.handleChange.bind(this);
+    //}
+
+    //handleChange(){
+    //    this.setState({checked: !checked});
+    //}
+    
     render() {
         return(
             <div>  
@@ -12,7 +26,7 @@ class Homepage extends React.Component{
                     applications in React with an Express API back-end.</p>
                 </div>
                 <div>
-                   
+                    
                 </div>
             </div>
         )
@@ -20,3 +34,9 @@ class Homepage extends React.Component{
 }
 
 export default Homepage;
+//
+//<input
+//                        type="checkbox"
+//                        checked={checked}
+//                        onChange={handleChange}    
+//                    />
