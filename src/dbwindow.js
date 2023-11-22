@@ -37,7 +37,7 @@ class DBWindow extends React.Component{
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({name: this.state.value,colour: this.state.message})
         };
-        let res = await fetch('https://desolate-eyrie-13469-959621a3e284.herokuapp.com/add_user', request)
+        let res = await fetch('http://13.239.20.181:3001/', request)
 
 
         let resJson = await res.json();

@@ -12,7 +12,7 @@ class ReactLink extends React.Component{
         .then(res => this.setState({apiResponse: res}))
 
       if (this.state.apiResponse === ""){
-        this.setState({apiResponse: "Failed to mount API"})
+        this.setState({apiResponse: "Failed to mount API, this may be due to AWS migration"})
       }
     }
     
