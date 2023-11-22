@@ -17,7 +17,7 @@ function BarChart(){
     }, [])
 
     const fetchData = async () => {
-        const response = await fetch('http://13.239.20.181:3001/');
+        const response = await fetch('http://13.239.20.181:3001/users');
         console.log("Fetched entries (chart)");
 
         updateChartData(await response.json());

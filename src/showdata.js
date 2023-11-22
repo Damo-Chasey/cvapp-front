@@ -8,7 +8,7 @@ export function ShowData() {
     }, [])
 
     const names = async () => {
-        const response = await fetch('http://13.239.20.181:3001/');
+        const response = await fetch('http://13.239.20.181:3001/users');
         console.log("Fetched entries");
 
         setName(await response.json());
