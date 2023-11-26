@@ -35,6 +35,10 @@ ol, ul {
   list-style-type:none;
 }
 
+div.indexBody {
+  justify-content: middle;
+  background-color: #dee1e3; 
+}
 
 div.dataInput > form{
   border-radius: 10px;
@@ -87,6 +91,7 @@ ul.nav-tabs {
   background-color: #1e3665d0;
   padding-block: 10px;
   color: #dee1e3;
+  border-radius: 10px;
 }
 
 p.nav-link {
