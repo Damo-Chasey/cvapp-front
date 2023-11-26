@@ -1,20 +1,20 @@
 import React from 'react';
-
+//import CheckBox from './tickbox.js';
 
 class Homepage extends React.Component{
-    //constructor (props){
-    //    super(props)
-    //    this.state = {
-    //        checked: false,
-    //    };
-//
-    //    this.handleChange = this.handleChange.bind(this);
-    //}
+    constructor(props){
+        super(props);
+        this.state = {
+            checked: false
+        }
 
-    //handleChange(){
-    //    this.setState({checked: !checked});
-    //}
+        this.changeValue = this.changeValue.bind(this);
+    }
     
+    changeValue = () => {
+        this.setState({checked: !this.state.checked});
+    }
+
     render() {
         return(
             <div>  
@@ -27,6 +27,15 @@ class Homepage extends React.Component{
                 </div>
                 <div>
                     
+                    <div>
+                        <input
+                        type="checkbox"
+                        checked={this.state.checked}
+                        onChange={this.changeValue}    
+                        />
+                    </div>
+
+                    {this.state.checked === true ? <p>Checkbox has been checked!</p> : null}
                 </div>
             </div>
         )
@@ -34,9 +43,5 @@ class Homepage extends React.Component{
 }
 
 export default Homepage;
-//
-//<input
-//                        type="checkbox"
-//                        checked={checked}
-//                        onChange={handleChange}    
-//                    />
+
+//<CheckBox inputValue={this.state.checked} onChange={this.changeValue}/>
