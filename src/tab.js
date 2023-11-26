@@ -24,12 +24,15 @@ class Tabs extends React.Component {
     render(){
         return(
             <div>
+                
                 {this.props.isOpen ? (
-                    <ul className="nav-tabs">
-                        <li>{this.renderTab(0)}</li>
-                        <li>{this.renderTab(1)}</li>
-                        <li>{this.renderTab(2)}</li>
-                    </ul>
+                    <div>
+                        <ul className="nav-tabs">
+                            <li>{this.renderTab(0)}</li>
+                            <li>{this.renderTab(1)}</li>
+                            <li>{this.renderTab(2)}</li>
+                        </ul>
+                    </div>
                 ) : null}
                 
                 <div className="windows">
