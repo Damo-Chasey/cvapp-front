@@ -12,7 +12,9 @@ class App extends React.Component{
     super(props);
     this.state = {
         checked: false,
-        dropOpen: true
+        dropOpen: true,
+        styleCheck: false,
+        styleSheet: "",
     }
   } 
     handleDropOpen = () => {
@@ -23,45 +25,72 @@ class App extends React.Component{
       this.setState({checked: !this.state.checked});
     }
 
+    changeStyle = () => {
+      this.setState({styleCheck: !this.state.styleCheck});
+      if(this.state.styleCheck === false){
+        this.setState({styleSheet: "red"});
+      }else{
+        this.setState({styleSheet: ""});
+      }
+    }
+
   render(){
     return(
-      <header className='App-header'>
-        <div>
-        
-        
-          <div className="indexBody">
+      <body className={"body" + this.state.styleSheet}>
+         
+          <div className={"indexBody" + this.state.styleSheet}>
 
-              <div className={"dropDown"}>
+              <div className={"dropDown" + this.state.styleSheet}>
                 <div onClick={this.handleDropOpen}><img src={"burgor64blue.png"} alt={"burger menu"}/></div>
-                
+                {this.state.styleCheck === true ? this.linkUp() : null}
               </div>
 
               <li>
-              <Tabs isOpen={this.state.dropOpen}/>
+              <Tabs styleSheet={this.state.styleSheet} isOpen={this.state.dropOpen}/>
               </li>
           </div>
 
-          <div>
-            <input
-                type="checkbox"
-                checked={this.state.checked}
-                onChange={this.changeValue}    
-            />
+          <div className={"freefloat" + this.state.styleSheet}>
+            <div>
+              <div>
+                <p>Check this box to activate the bolt widget! </p>
+                <input
+                    type="checkbox"
+                    checked={this.state.checked}
+                    onChange={this.changeValue}    
+                />
+              </div>
+
+              <div>
+                <p>Check this box to change the style! </p>
+                <input
+                    type="checkbox"
+                    checked={this.state.styleCheck}
+                    onChange={this.changeStyle}    
+                />
+              </div>
+
+            <div>
+              <p>Github for this project:</p><a href="https://github.com/Damo-Chasey/cvapp"><img 
+              src="gitlogo.png" width="30px" alt="github logo"></img></a>
+            </div>
+
+            <div>
+              {this.state.styleCheck === false ? this.linkUp() : null}
+            </div>
+
+            <div>
+              {this.state.checked === true ? <img src={"bolt-black.gif"} alt={"lighting bold icon"}/> : null}
+            </div>
           </div>
-          {this.state.checked === true ? <p>Checkbox has been checked!</p> : null}
-          <p>Github for this project:</p><a href="https://github.com/Damo-Chasey/cvapp"><img 
-                src="gitlogo.png" width="30px" alt="github logo"></img></a>
+          
         </div>
-
-        
-
-        {this.linkUp()}
-      </header>
+      </body>
     );
   }
 
   linkUp(){
-    return(<ReactLink/>)
+    return(<ReactLink styleSheet={this.state.styleSheet}/>)
   }
 }
 

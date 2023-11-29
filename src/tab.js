@@ -12,7 +12,9 @@ function Tab(props) {
 class Tabs extends React.Component {
     constructor(props){
         super(props);
-        this.state = { tabs:[
+        this.state = { 
+            styleSheet: this.props.styleSheet,
+            tabs:[
             {name: "Home", isOpen: true},
             {name: "Database", isOpen: false},
             {name: "Resume", isOpen: false},
@@ -27,7 +29,8 @@ class Tabs extends React.Component {
                 
                 {this.props.isOpen ? (
                     <div>
-                        <ul className="nav-tabs">
+                        {console.log(this.props.styleSheet)}
+                        <ul className={"nav-tabs" + this.props.styleSheet}>
                             <li>{this.renderTab(0)}</li>
                             <li>{this.renderTab(1)}</li>
                             <li>{this.renderTab(2)}</li>
@@ -35,7 +38,7 @@ class Tabs extends React.Component {
                     </div>
                 ) : null}
                 
-                <div className="windows">
+                <div className={"windows" + this.props.styleSheet}>
                     {this.renderWindow(0)}
                     {this.renderWindow(1)}
                     {this.renderWindow(2)}
@@ -94,19 +97,19 @@ class Tabs extends React.Component {
 
     window0(){
         return(
-            <Homepage/>
+            <Homepage styleSheet={this.props.styleSheet}/>
         );
     }
 
     window1(){
         return(
-            <DBWindow/>
+            <DBWindow styleSheet={this.props.styleSheet}/>
         );
     }
 
     window2(){
         return(
-            <Info/>
+            <Info styleSheet={this.props.styleSheet}/>
         );
     }
 }

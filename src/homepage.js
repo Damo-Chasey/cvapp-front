@@ -3,12 +3,17 @@ import React from 'react';
 
 class Homepage extends React.Component{
     
-
+    constructor(props){
+        super(props);
+            this.state = {
+                styleSheet: this.props.styleSheet,
+            }
+    }
 
     render() {
         return(
             <div>  
-                <div className="titleBox">
+                <div className={"titleBox" + this.props.styleSheet}>
                     <h3>Damien H.</h3>
                     <h4>Software Developer</h4>
                     <p>Hi! My name is Damien, I am a graduate developer located in auckland</p>
