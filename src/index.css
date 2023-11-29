@@ -21,7 +21,7 @@ time, mark, audio, video {
 }
 
 header, body {
-  background-color:#dee1e3;
+  background-color:#e3dfde;
 }
 
 div {
@@ -75,7 +75,7 @@ div.windowsContent {
   padding: 5px;
   
 }
-div.titleBox{
+div.titleBox {
   color: #dee1e3;
   background-color: #1e3665d0;
   border-radius: 10px;
@@ -114,4 +114,141 @@ td.chartTable {
   background-color:#dee1e3;
   border-radius: 10px;
   padding: 15px;
+}
+
+div.freefloat {
+  color: black;
+}
+
+
+
+body.bodyred {
+  background-image: url("../public/backround1.png");
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+}
+div.indexBodyred {
+  justify-content: left;
+  text-align: left;
+  align-self: left;
+  align-items: left;
+}
+div.dropDownred {
+  justify-content: left;
+  text-align: left;
+  align-self: left;
+  align-items: left;
+  display: flex;
+  color: white;
+}
+
+
+ul.nav-tabsred {
+  display:flex;
+  justify-content: center;
+  background-color: #8e2929;
+  padding-block: 10px;
+  color: #dee1e3;
+  border-radius: 10px;
+}
+
+div.windowsred{
+  min-width: 250px;
+  color: #dee1e3;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+div.titleBoxred{
+  justify-content: left;
+  text-align: left;
+  align-self: left;
+  align-items: left;
+
+  color: #dee1e3;
+  background-color: #8e2929;
+  border-radius: 10px;
+}
+
+div.titleBoxred > p{
+  justify-content: left;
+  text-align: left;
+  align-self: left;
+  align-items: left;
+
+  color: #dee1e3;
+  background-color: #8e2929;
+  border-radius: 10px;
+}
+div.titleBoxred > h3{
+  justify-content: left;
+  text-align: left;
+  align-self: left;
+  align-items: left;
+
+  color: #dee1e3;
+  background-color: #8e2929;
+  border-radius: 10px;
+}
+div.titleBoxred > h4{
+  justify-content: left;
+  text-align: left;
+  align-self: left;
+  align-items: left;
+
+  color: #dee1e3;
+  background-color: #8e2929;
+  border-radius: 10px;
+}
+
+div.freefloatred { 
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.freefloatred > div{
+  padding: 10px;
+  border-radius: 10px;
+  background-color: grey;
+  color: white;
+  
+}
+div.freefloatred > div > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+p.express-linkred {
+  font-size: larger;
+}
+
+
+
+div.dataInputred > form{
+  border-radius: 10px;
+  background-color: #3e0c0c;
+  padding: 5px;
+}
+div.dataInput > form > label {
+  display: block;
+  padding: 5px;
+}
+div.showDatared{
+  display: inline-flex;
+  flex-wrap: wrap;
+  background-color: #3e0c0c;
+  border-radius: 10px;
+}
+div.showDatared > div{
+  padding: 3px;
+}
+div.showDatared > div > li{
+  border-radius: 10px;
+  width: 150px;
+  padding: 5px;
+  background-color: #8e2929;
 }

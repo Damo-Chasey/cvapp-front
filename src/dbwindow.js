@@ -49,12 +49,12 @@ class DBWindow extends React.Component{
     render() {
         return(
             <div className="windowsContent">
-                <div className="titleBox">
+                <div className={"titleBox" + this.props.styleSheet}>
                     <h2>Colour database</h2>
                     <p>Leave an alias and your favourite colour! or just write something silly</p>
                     <p>This database fetches data through an express api and into a mongo database</p>
                 </div>
-                <div className="dataInput">
+                <div className={"dataInput" + this.props.styleSheet}>
                     <form onSubmit={this.handleSubmit}>
                         <table>
                             <tbody>
@@ -92,7 +92,7 @@ class DBWindow extends React.Component{
                     </form>
                 </div>
                 <div className="showStats">
-                    {this.state.listMounted === true ? <ShowData/> : null}
+                    {this.state.listMounted === true ? <ShowData /> : null}
                 </div>
                 <div class="spacer">
 

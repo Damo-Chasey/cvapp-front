@@ -23,7 +23,7 @@ class ReactLink extends React.Component{
     render(){
       return(
         <div>
-          <p className="express-link">{this.state.apiResponse}</p>
+          <p className={"express-link" + this.props.styleSheet}>{this.state.apiResponse}</p>
         </div>
       );
     }
