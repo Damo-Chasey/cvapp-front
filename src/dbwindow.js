@@ -92,7 +92,7 @@ class DBWindow extends React.Component{
                     </form>
                 </div>
                 <div className="showStats">
-                    {this.state.listMounted === true ? <ShowData /> : null}
+                    {this.state.listMounted === true ? <ShowData styleSheet={this.props.styleSheet}/> : null}
                 </div>
                 <div class="spacer">
 
