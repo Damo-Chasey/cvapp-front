@@ -11,11 +11,18 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-        checked: false,
-        dropOpen: true,
-        styleCheck: false,
-        styleSheet: "",
+      checked: false,
+      dropOpen: true,
+      styleCheck: false,
+      styleSheet: "",
+      tabs:[
+        {name: "Home", isOpen: true},
+        {name: "Database", isOpen: false},
+        {name: "Resume", isOpen: false},
+      ],
     }
+
+    this.flipValue = this.flipValue.bind(this)
   } 
     handleDropOpen = () => {
       this.setState({dropOpen: !this.state.dropOpen});
@@ -34,6 +41,17 @@ class App extends React.Component{
       }
     }
 
+    flipValue(i){
+      this.setState(prevState => {
+          const newArray = [prevState.tabs];
+          for(let j = 0 ; j < 3 ; ++j){
+              newArray[0][j] = {name: newArray[0][j].name, isOpen: false};
+          }
+          newArray[0][i] = {name: newArray[0][i].name, isOpen: !newArray[0][i].isOpen};
+          return {array: newArray[0]};
+      });
+  }
+
   render(){
     return(
       <body className={"body" + this.state.styleSheet}>
@@ -46,7 +64,10 @@ class App extends React.Component{
               </div>
 
               <li>
-              <Tabs styleSheet={this.state.styleSheet} isOpen={this.state.dropOpen}/>
+                <Tabs tabs={this.state.tabs} 
+                styleSheet={this.state.styleSheet} 
+                isOpen={this.state.dropOpen}
+                actions={{flipValue: this.flipValue}}/>
               </li>
           </div>
 

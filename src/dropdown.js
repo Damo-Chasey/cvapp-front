@@ -1,25 +1,19 @@
 import React from 'react';
 import Tabs from './tab.js'
 
-const Dropdown = (props) => {
-  const [open, setOpen] = React.useState(true);
+class Dropdrown extends React.component{
 
-  const handleOpen = () => {
-    setOpen(!open);
+  handleOpen = () => {
+    setOpen(!open); 
   };
 
-  return(
+  render() {
     <div>
       <ul>
-        <div onClick={handleOpen}><img src={"burgor64blue.png"} alt={"burger menu"}/></div>
-      </ul>
-      <ul>
-        <div>
-          <Tabs isOpen={open}/>
-        </div>
+        <div onClick={this.handleOpen}><img src={"burgor64blue.png"} alt={"burger menu"}/></div>
       </ul>
     </div>
-  );
+  };
 };
 
 export default Dropdown;

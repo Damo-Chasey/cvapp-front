@@ -6,8 +6,6 @@ import Dropdown from './dropdown.js';
 
 
 class App extends React.Component{
-  
-
   render(){
     return(
       <div style={{ backgroundImage: `url(${"backround1.png"})` }}>
