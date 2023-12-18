@@ -22,6 +22,15 @@ time, mark, audio, video {
 
 header, body {
   background-color:#e3dfde;
+  display: block;
+}
+
+body.mainBody {
+  align-content: space-between;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  min-height: 1000px;
 }
 
 div {
@@ -29,15 +38,26 @@ div {
   font-family: 'Andale Mono, monospace';
 }
 
-ol, ul {
-  margin: 0;
-  padding: 0;
-  list-style-type:none;
+div.sidebar {
+  background-color:#1e3665d0;
+  width: 200px;
+  padding: 10px;
+  color: #dee1e3;
+  position: sticky;
+  
+  display: inline;
+}
+div.sidebar > ul{
+  padding: 10px;
+}
+div.sidebar > ul > li {
+  background-color: #0d173b;
 }
 
 div.indexBody {
   justify-content: middle;
-  background-color: #dee1e3; 
+  background-color: #dee1e3;
+  width: 100%;
 }
 
 div.dataInput > form{
@@ -89,9 +109,8 @@ ul.nav-tabs {
   display:flex;
   justify-content: center;
   background-color: #1e3665d0;
-  padding-block: 10px;
+  padding: 10px;
   color: #dee1e3;
-  border-radius: 10px;
 }
 
 p.nav-link {
@@ -104,12 +123,6 @@ table {
 
 }
 
-div.spacer{
-  background-color:"#dee1e3";
-  padding-Block:"100px" ;
-  color:"White";
-}
-
 td.chartTable {
   background-color:#dee1e3;
   border-radius: 10px;
@@ -119,6 +132,41 @@ td.chartTable {
 div.freefloat {
   color: black;
 }
+
+div.socials {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+div.socials > ul{
+  padding: 5px;
+  background-color:#8e2929;
+  border-radius: 10px;
+}
+div.socials > ul > li{
+  padding: 10px;
+  width: 200px;
+}
+div.socials > ul > li > a{
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #3e0c0c;
+  align-items: center;
+  
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+div.dropDown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #dee1e3;
+  border-radius: 10px;
+}
+
 
 
 

@@ -14,31 +14,17 @@ class Tabs extends React.Component {
         super(props);
         this.state = { 
             styleSheet: this.props.styleSheet,
-            open: props.isOpen,
         };
     }
 
     render(){
         return(
             <div>
-                
-                {this.props.isOpen ? (
-                    <div>
-                        {console.log(this.props.styleSheet)}
-                        <ul className={"nav-tabs" + this.props.styleSheet}>
-                            <li>{this.renderTab(0)}</li>
-                            <li>{this.renderTab(1)}</li>
-                            <li>{this.renderTab(2)}</li>
-                        </ul>
-                    </div>
-                ) : null}
-                
                 <div className={"windows" + this.props.styleSheet}>
                     {this.renderWindow(0)}
                     {this.renderWindow(1)}
                     {this.renderWindow(2)}
                 </div>
-                
             </div>
             
         );

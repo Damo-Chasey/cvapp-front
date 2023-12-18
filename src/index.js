@@ -1,11 +1,14 @@
+//import { Route, Redirect, Switch } from "react-router-dom"
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ReactLink from './explnk.js';
-//import Dropdown from './dropdown.js';
+import Socials from './components/social.js';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import './index.css';
 import Tabs from './tab.js'
+import NavBar from './navbar.js';
+import SideBar from "./components/sidebar.js"
 
 class App extends React.Component{
   constructor(props){
@@ -23,6 +26,7 @@ class App extends React.Component{
     }
 
     this.flipValue = this.flipValue.bind(this)
+    this.changeStyle = this.changeStyle.bind(this)
   } 
     handleDropOpen = () => {
       this.setState({dropOpen: !this.state.dropOpen});
@@ -52,62 +56,94 @@ class App extends React.Component{
       });
   }
 
-  render(){
-    return(
-      <body className={"body" + this.state.styleSheet}>
-         
-          <div className={"indexBody" + this.state.styleSheet}>
-
-              <div className={"dropDown" + this.state.styleSheet}>
-                <div onClick={this.handleDropOpen}><img src={"burgor64blue.png"} alt={"burger menu"}/></div>
-                {this.state.styleCheck === true ? this.linkUp() : null}
-              </div>
-
-              <li>
-                <Tabs tabs={this.state.tabs} 
-                styleSheet={this.state.styleSheet} 
-                isOpen={this.state.dropOpen}
-                actions={{flipValue: this.flipValue}}/>
-              </li>
-          </div>
-
-          <div className={"freefloat" + this.state.styleSheet}>
-            <div>
-              <div>
-                <p>Check this box to activate the bolt widget! </p>
-                <input
-                    type="checkbox"
-                    checked={this.state.checked}
-                    onChange={this.changeValue}    
-                />
-              </div>
-
-              <div>
-                <p>Check this box to change the style! </p>
-                <input
-                    type="checkbox"
-                    checked={this.state.styleCheck}
-                    onChange={this.changeStyle}    
-                />
-              </div>
-
-            <div>
-              <p>Github for this project:</p><a href="https://github.com/Damo-Chasey/cvapp"><img 
-              src="gitlogo.png" width="30px" alt="github logo"></img></a>
-            </div>
-
-            <div>
-              {this.state.styleCheck === false ? this.linkUp() : null}
-            </div>
-
-            <div>
-              {this.state.checked === true ? <img src={"bolt-black.gif"} alt={"lighting bold icon"}/> : null}
-            </div>
-          </div>
-          
+  renderHeader(){
+    return( 
+      <div className="header">
+        <div className={"dropDown" + this.state.styleSheet}>
+          <div onClick={this.handleDropOpen}><img src={"burgor64blue.png"} alt={"burger menu"}/></div>
+          {this.state.styleCheck === true ? this.linkUp() : null}
         </div>
+
+        <div>
+        <NavBar tabs={this.state.tabs} 
+          styleSheet={this.state.styleSheet} 
+          isOpen={true}
+          actions={{flipValue: this.flipValue}}/>
+        </div>
+      </div>
+    )
+  }
+
+  extraButtons(){
+    return(
+      <ul>
+        <li>
+          <p>Check this box to change the style! </p>
+            <input
+              type="checkbox"
+              checked={this.state.styleCheck}
+              onChange={this.changeStyle}    
+            />
+        </li>
+        <li>
+          <p>Check this box to activate the bolt widget! </p>
+            <input
+              type="checkbox"
+              checked={this.state.checked}
+              onChange={this.changeValue}    
+            />
+        </li>
+        <li>
+          <a href="https://github.com/Damo-Chasey/cvapp"><p>Github for this project:</p><img 
+            src="gitlogo.png" width="30px" alt="github logo"></img></a>
+        </li>
+        <li>
+          {this.state.styleCheck === true ? <Socials/> : null}
+        </li>
+      </ul>
+    )
+  }
+
+  corperateView(){
+    return(
+      <body className={"mainBody" + this.state.styleSheet}>
+          {this.state.dropOpen === true ? 
+            <SideBar styleSheet={this.state.styleSheet}
+            actions=
+              {{changeStyle: this.changeStyle,
+              changeValue: this.changeValue}}/> 
+            : null}
+
+          
+
+          <div className={"indexBody" + this.state.styleSheet}>
+              <Tabs tabs={this.state.tabs} 
+              styleSheet={this.state.styleSheet} 
+              isOpen={true}
+              actions={{flipValue: this.flipValue}}/>
+
+              {this.state.styleCheck === false ? this.linkUp() : null}
+
+              {this.state.checked === true ? <img src={"bolt-black.gif"} alt={"lighting bold icon"}/> : null}
+          </div>
+
       </body>
     );
+  }
+
+  artView(){
+    return(
+      <Socials/>
+    );
+  }
+
+  render(){
+    return(
+        <div>
+          {this.renderHeader()}
+          {this.corperateView()}
+        </div>
+      );
   }
 
   linkUp(){
