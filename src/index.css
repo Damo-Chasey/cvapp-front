@@ -1,302 +1,86 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	vertical-align: baseline;
-  list-style-type: none;
-
-  text-align: center;
-}
-
-header, body {
-  background-color:#e3dfde;
-  display: block;
-}
-
-body.mainBody {
+div.mainBody {
   align-content: space-between;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
   min-height: 1000px;
-}
 
-div {
-  text-decoration: none;
-  font-family: 'Andale Mono, monospace';
-}
-
-div.sidebar {
-  background-color:#1e3665d0;
-  width: 200px;
-  padding: 10px;
-  color: #dee1e3;
-  position: sticky;
-  
-  display: inline;
-}
-div.sidebar > ul{
-  padding: 10px;
-}
-div.sidebar > ul > li {
-  background-color: #0d173b;
-}
-
-div.indexBody {
-  justify-content: middle;
-  background-color: #dee1e3;
   width: 100%;
 }
 
-div.dataInput > form{
-  border-radius: 10px;
-  background-color:#0d173b;
-  padding: 5px;
-}
-div.dataInput > form > label {
-  display: block;
-  padding: 5px;
-}
-div.showData{
-  display: inline-flex;
-  flex-wrap: wrap;
-  background-color: #1e3665d0;
-  border-radius: 10px;
-}
-div.showData > div{
-  padding: 3px;
-}
-div.showData > div > li{
-  border-radius: 10px;
-  width: 150px;
-  padding: 5px;
-  background-color: #0d183b;
+div.contentArea{
+  flex-grow: 1;
 }
 
-div.windows {
-  padding: 10px;
-  min-width: 250px;
+button.dropDown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0px;
+  background-color: gray;
+  border-radius: 10px;
+  z-index: 10;
 }
-div.windowsContent {
+
+
+
+div.sidebar {
+  background-color:#8e2929;
+  width: 200px;
   color: #dee1e3;
-  border-radius: 10px;
-  padding: 5px;
-  
-}
-div.titleBox {
-  color: #dee1e3;
-  background-color: #1e3665d0;
-  border-radius: 10px;
-}
+  position: sticky;
 
-ul.nav {
-  color: Black;
+  display: inline;
 }
-
-ul.nav-tabs {
-  display:flex;
-  justify-content: center;
-  background-color: #1e3665d0;
-  padding: 10px;
-  color: #dee1e3;
-}
-
-p.nav-link {
-  padding-inline: 15px;
-  font-size: large;
-}
-
-table {
-  width:100%;
-
-}
-
-td.chartTable {
-  background-color:#dee1e3;
-  border-radius: 10px;
-  padding: 15px;
-}
-
-div.freefloat {
-  color: black;
-}
-
-div.socials {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
-}
-div.socials > ul{
+div.sidebar > ul{
+  margin-top: 100px;
   padding: 5px;
   background-color:#8e2929;
   border-radius: 10px;
 }
-div.socials > ul > li{
+div.sidebar > ul > li{
   padding: 10px;
   width: 200px;
+  padding-inline-end: 20px;
 }
-div.socials > ul > li > a{
+div.sidebar > ul > li > button{
+  width: 100%;
   justify-content: space-between;
   border-radius: 5px;
   background-color: #3e0c0c;
+  color: aliceblue;
   align-items: center;
   
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
-}
-
-div.dropDown {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background-color: #dee1e3;
-  border-radius: 10px;
+  flex-direction: column;
 }
 
 
 
 
-body.bodyred {
-  background-image: url("../public/backround1.png");
-  display: flexbox;
-  justify-content: center;
-  align-items: center;
-}
-div.indexBodyred {
-  justify-content: left;
-  text-align: left;
-  align-self: left;
-  align-items: left;
-}
-div.dropDownred {
-  justify-content: left;
-  text-align: left;
-  align-self: left;
-  align-items: left;
-  display: flex;
-  color: white;
-}
 
 
-ul.nav-tabsred {
-  display:flex;
-  justify-content: center;
-  background-color: #8e2929;
-  padding-block: 10px;
+
+
+
+
+/*
+div.sidebar {
+  background-color:#8e2929;
+  width: 200px;
   color: #dee1e3;
-  border-radius: 10px;
-}
+  position: sticky;
 
-div.windowsred{
-  min-width: 250px;
-  color: #dee1e3;
-  border-radius: 10px;
+  display: inline;
+}
+div.sidebar > ul{
+  margin-top: 100px;
+  padding: 0px;
+}
+div.sidebar > ul > li {
   padding: 5px;
-}
-
-div.titleBoxred{
-  justify-content: left;
-  text-align: left;
-  align-self: left;
-  align-items: left;
-
-  color: #dee1e3;
-  background-color: #8e2929;
-  border-radius: 10px;
-}
-
-div.titleBoxred > p{
-  justify-content: left;
-  text-align: left;
-  align-self: left;
-  align-items: left;
-
-  color: #dee1e3;
-  background-color: #8e2929;
-  border-radius: 10px;
-}
-div.titleBoxred > h3{
-  justify-content: left;
-  text-align: left;
-  align-self: left;
-  align-items: left;
-
-  color: #dee1e3;
-  background-color: #8e2929;
-  border-radius: 10px;
-}
-div.titleBoxred > h4{
-  justify-content: left;
-  text-align: left;
-  align-self: left;
-  align-items: left;
-
-  color: #dee1e3;
-  background-color: #8e2929;
-  border-radius: 10px;
-}
-
-div.freefloatred { 
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-div.freefloatred > div{
-  padding: 10px;
-  border-radius: 10px;
-  background-color: grey;
-  color: white;
-  
-}
-div.freefloatred > div > div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-p.express-linkred {
-  font-size: larger;
-}
-
-
-
-div.dataInputred > form{
-  border-radius: 10px;
-  background-color: #3e0c0c;
-  padding: 5px;
-}
-div.dataInput > form > label {
-  display: block;
-  padding: 5px;
-}
-div.showDatared{
-  display: inline-flex;
-  flex-wrap: wrap;
   background-color: #3e0c0c;
   border-radius: 10px;
 }
-div.showDatared > div{
-  padding: 3px;
-}
-div.showDatared > div > li{
-  border-radius: 10px;
-  width: 150px;
-  padding: 5px;
-  background-color: #8e2929;
-}
+*/

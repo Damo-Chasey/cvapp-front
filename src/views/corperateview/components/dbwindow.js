@@ -49,12 +49,12 @@ class DBWindow extends React.Component{
     render() {
         return(
             <div className="windowsContent">
-                <div className={"titleBox" + this.props.styleSheet}>
+                <div className={"titleBox"}>
                     <h2>Colour database</h2>
                     <p>Leave an alias and your favourite colour! or just write something silly</p>
                     <p>This database fetches data through an express api and into a mongo database</p>
                 </div>
-                <div className={"dataInput" + this.props.styleSheet}>
+                <div className={"dataInput"}>
                     <form onSubmit={this.handleSubmit}>
                         <table>
                             <tbody>

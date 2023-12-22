@@ -46,7 +46,7 @@ function BarChart(){
         var count = 0;
         for(var i = 0; i < data.length; i++){
             
-            if(data[i].colour.toLowerCase() == group){
+            if(data[i].colour.toLowerCase() === group){
                 count++;
             }
         }
