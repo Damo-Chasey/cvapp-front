@@ -13,7 +13,7 @@ class Homepage extends React.Component{
     render() {
         return(
             <div>  
-                <div className={"titleBox" + this.props.styleSheet}>
+                <div className={"titleBox"}>
                     <h3>Damien H.</h3>
                     <h4>Software Developer</h4>
                     <p>Hi! My name is Damien, I am a graduate developer located in auckland</p>

@@ -20,7 +20,7 @@ class Tabs extends React.Component {
     render(){
         return(
             <div>
-                <div className={"windows" + this.props.styleSheet}>
+                <div className={"windows"}>
                     {this.renderWindow(0)}
                     {this.renderWindow(1)}
                     {this.renderWindow(2)}
@@ -60,19 +60,19 @@ class Tabs extends React.Component {
 
     window0(){
         return(
-            <Homepage styleSheet={this.props.styleSheet}/>
+            <Homepage />
         );
     }
 
     window1(){
         return(
-            <DBWindow styleSheet={this.props.styleSheet}/>
+            <DBWindow />
         );
     }
 
     window2(){
         return(
-            <Info styleSheet={this.props.styleSheet}/>
+            <Info />
         );
     }
 }
