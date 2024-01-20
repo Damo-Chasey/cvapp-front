@@ -11,7 +11,7 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      view: "art",
+      view: "corperate",
       checked: false,
       dropOpen: false,
       checked: false,

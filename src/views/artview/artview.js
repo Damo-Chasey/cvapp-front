@@ -18,7 +18,6 @@ export default class ArtView extends React.Component {
 
                 <img src="500x.gif"></img>
 
-                <Socials/>
             </div>
         )
     }

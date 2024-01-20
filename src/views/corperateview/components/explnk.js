@@ -7,7 +7,7 @@ class ReactLink extends React.Component{
     }
   
     callAPI(){
-      fetch("http://13.239.20.181:3001/")
+      fetch("http://3.26.130.133:3001/")
         .then(res => res.text())
         .then(res => this.setState({apiResponse: res}))
 

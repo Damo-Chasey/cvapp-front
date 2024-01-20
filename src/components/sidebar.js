@@ -24,16 +24,6 @@ export default class SideBar extends React.Component {
         <ul>
           <li>
             <button>
-              <p>Check this box to activate the bolt widget! </p>
-              <input
-                type="checkbox"
-                checked={this.state.checked}
-                onChange={this.props.actions.changeValue}    
-              />
-            </button>
-          </li>
-          <li>
-            <button>
               <a href="https://github.com/Damo-Chasey/cvapp"><p>Github for this project:</p><img 
                 src="gitlogo.png" width="30px" alt="github logo"></img></a>
             </button>
@@ -46,3 +36,12 @@ export default class SideBar extends React.Component {
     )
   }
 }
+
+//<button>
+//              <p>Check this box to activate the bolt widget! </p>
+//              <input
+//                type="checkbox"
+//                checked={this.state.checked}
+//                onChange={this.props.actions.changeValue}    
+//              />
+//            </button>
