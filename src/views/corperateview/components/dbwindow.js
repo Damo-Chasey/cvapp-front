@@ -37,11 +37,15 @@ class DBWindow extends React.Component{
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify({name: this.state.value,colour: this.state.message})
         };
-        let res = await fetch('http://3.26.130.133:3001/add_user', request)
-
-
-        let resJson = await res.json();
-        console.log(resJson);
+        
+        try{
+            let res = await fetch('http://3.26.130.133:3001/add_user', request)
+            let resJson = await res.json();
+            console.log(resJson);
+        } catch (e) {
+            console.log(e)
+        }
+        
 
         this.setState({listMounted: true}); //Other half of Re-Render
     }
@@ -104,7 +108,7 @@ class DBWindow extends React.Component{
                     </td>
                     <td width="33%"></td>
                 </div>
-                
+                <p className="warning">Currently not working as I am tranfering DBs</p>
             </div>
         )
     };

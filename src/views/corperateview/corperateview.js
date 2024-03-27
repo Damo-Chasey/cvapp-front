@@ -1,6 +1,4 @@
-//import { Route, Redirect, Switch } from "react-router-dom"
 import React from 'react';
-import ReactLink from './components/explnk.js';
 import Socials from '../../components/social.js';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
@@ -18,9 +16,9 @@ export default class CorperateView extends React.Component{
       styleSheet: "",
       view: "corperate",
       tabs:[
-        {name: "Home", isOpen: true},
+        {name: "Home", isOpen: false},
         {name: "Database", isOpen: false},
-        {name: "Resume", isOpen: false},
+        {name: "Widgets", isOpen: true},
       ],
     }
 
@@ -64,7 +62,7 @@ export default class CorperateView extends React.Component{
               isOpen={true}
               actions={{flipValue: this.flipValue}}/>
 
-              {this.linkUp()}
+              
 
               {this.props.checked === true ? <img src={"bolt-black.gif"} alt={"lighting bold icon"}/> : null}
           </div>
@@ -88,9 +86,5 @@ export default class CorperateView extends React.Component{
           {this.state.view === "corperate" ? this.corperateView() : null}
         </div>
       );
-  }
-
-  linkUp(){
-    return(<ReactLink styleSheet={this.state.styleSheet}/>)
   }
 }

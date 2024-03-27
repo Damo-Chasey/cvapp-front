@@ -275,3 +275,7 @@ div.showDatared > div > li{
   background-color: #8e2929;
 }
 
+p.warning {
+  color: red;
+}
+
