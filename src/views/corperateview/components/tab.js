@@ -1,6 +1,6 @@
 import React from 'react';
 import DBWindow from './dbwindow.js';
-import Info from './info.js';
+import Widgets from './widgets.js';
 import Homepage from './homepage.js'
 
 function Tab(props) {
@@ -72,7 +72,7 @@ class Tabs extends React.Component {
 
     window2(){
         return(
-            <Info />
+            <Widgets />
         );
     }
 }

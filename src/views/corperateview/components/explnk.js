@@ -12,7 +12,7 @@ class ReactLink extends React.Component{
         .then(res => this.setState({apiResponse: res}))
 
       if (this.state.apiResponse === ""){
-        this.setState({apiResponse: "Failed to mount API, this may be due to AWS migration, try: http://54.206.75.134:3000/"})
+        this.setState({apiResponse: "Failed to mount API: Switching from Mongo to AWS"})
       }
     }
     
@@ -23,7 +23,7 @@ class ReactLink extends React.Component{
     render(){
       return(
         <div>
-          <p className={"express-link" + this.props.styleSheet}>{this.state.apiResponse}</p>
+          <p>{this.state.apiResponse}</p>
         </div>
       );
     }
