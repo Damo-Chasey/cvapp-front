@@ -11,23 +11,23 @@ export default class Widgets extends React.Component {
     render(){
         return(
             <div className = "titleBox">
-                {this.renderBolts()}
-                
-
+                <h5>Widgets!</h5>
+                <p>Now in blue</p>
+                <div className="widgets">
+                    <div className="widgetList">{this.renderBolts()}</div>
+                </div>
             </div>
         )
     }
 
     renderBolts(){
         let listItems = []
-        for(let i = 0 ; i < 5 ; ++i){
-            listItems.push(<img src={"bolt-black.gif"} alt={"lighting bolt icon"} width={i*30}/>)
-        }
-        for(let i = 5 ; i >= 0 ; --i){
-            listItems.push(<img src={"bolt-black.gif"} alt={"lighting bolt icon"} width={i*30}/>)
+        for(let i = 0 ; i < 1 ; ++i){
+            listItems.push(<img src={"bolt-black.gif"} alt={"lighting bolt icon"}/>)
         }
         
-        return <React.Fragment>{listItems}</React.Fragment>
+        
+        return <div className="widget">{listItems}</div>
     }
 }
 

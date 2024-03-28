@@ -279,3 +279,16 @@ p.warning {
   color: red;
 }
 
+div.widgets{
+  display: grid;
+  justify-content: center;
+}
+div.widgetList{
+  padding: 10px;
+  background: #272e34;
+}
+div.widget
+{
+  width: 250px;
+  background: #475055;
+}
