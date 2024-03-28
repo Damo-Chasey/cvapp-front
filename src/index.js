@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import ArtView from './views/artview/artview.js';
 import CorperateView from './views/corperateview/corperateview.js';
 import './index.css'; 
-import { Route, Routes, BrowserRouter } from "react-router-dom"
+import { Route, Routes, BrowserRouter, Redirect } from "react-router-dom"
 
 
 class App extends React.Component{
@@ -14,6 +14,7 @@ class App extends React.Component{
             <div className="contentArea">
               <BrowserRouter>
               <Routes>
+                  <Route path="/" element={this.renderIndex}/>
                   <Route path="/corperate" element={<CorperateView/>}/>
                   <Route path="/art" element={<ArtView/>}/>
               </Routes>
@@ -21,6 +22,10 @@ class App extends React.Component{
             </div>
         </div>
       );
+  }
+
+  renderIndex(){
+    return(<p style={{background: "red"}}>Loading</p>)
   }
 }
 
