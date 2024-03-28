@@ -15,7 +15,7 @@ class App extends React.Component{
               <BrowserRouter>
               <Routes>
                   <Route path="/" element={this.renderIndex}/>
-                  <Route path="/corperate" element={<CorperateView/>}/>
+                  <Route path="/corperate" element={<CorperateView/>}/> 
                   <Route path="/art" element={<ArtView/>}/>
               </Routes>
               </BrowserRouter>
